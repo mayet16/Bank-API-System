@@ -1,0 +1,9 @@
+﻿@*@model BankViewModel
+
+
+
+@foreach (var x in Model.Banks)
+{
+    <label>AccountNumber</label>@x.Account_Number;
+    <label>Balance</label>@x.Balance;
+}*@

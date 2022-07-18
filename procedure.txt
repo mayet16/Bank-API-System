@@ -1,0 +1,32 @@
+deposit
+
+ create proc deposit(@acc int,@balance float)
+ as
+  begin
+  update Banks set balance=balance+@balance where Account_Number=@acc
+  end
+
+
+
+//adduser
+
+
+create proc adusers(@username varchar(20),@password varchar (20),@email varchar(30),@adress varchar(30),@mobile varchar (10))
+as
+begin
+   Exec createacc 0
+  Declare @a int
+  set  @a= (select MAX(Account_Number) from Banks)
+   insert into BankUser(username ,password ,email ,adress ,mobile) values(@username,@password,@email,@adress ,@mobile)
+   insert into user_Accs values(@a,(select max(id) from BankUser))
+end
+
+
+//create acc
+
+
+create proc createacc(@balance float)
+as
+begin
+insert into Banks(balance) values(@balance)
+end

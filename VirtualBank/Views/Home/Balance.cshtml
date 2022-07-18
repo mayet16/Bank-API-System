@@ -1,0 +1,100 @@
+﻿
+@model DepositViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "user Detials";
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <table width="900" border="1" align="center" cellpadding="0" cellspacing="0" style="font-weight:normal; background-color:#FFFFFF">
+        <tr>
+            <th colspan="3" scope="col" style="height:90px; background-color:#2175bc;">
+                <param name="movie" value="images/Bank.swf" />
+                    <param name="quality" value="high" />
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="160">
+                <div id="ddblueblockmenu">
+                    <div class="menutitle">Account Operations</div>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="deposit">Deposit</a></li>
+                        <li><a asp-controller="Home" asp-action="withdraw">Do Withdraw</a></li>
+                        <li><a asp-controller="Home" asp-action="Balance">Get Balancet</a></li>
+                        <li><a asp-controller="Home" asp-action="Transfer">Trasnsfer Amount</a></li>
+                        <li><a asp-controller="Home" asp-action="index">Go to Home </a></li>
+                        
+                    </ul>
+                    <div class="menutitle">&nbsp;</div>
+                </div>
+
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </td>
+            <td colspan="2" style="padding:20px;">
+                <div class="box1">
+                    <marquee><h2><font color="#FF0000">Yegna Bank</font></h2></marquee>
+                </div>
+                <br />
+                
+                    <table width="70%" border="0" align="center" cellpadding="2" cellspacing="3">
+                        <tr>
+                            <th colspan="3" bgcolor="#333333" scope="col"><font color="#FFFFFF">Check your Balance</font></th>
+                        </tr>
+                        <tr>
+                            <td width="39%">&nbsp;</td>
+                            <td width="3%">&nbsp;</td>
+                            <td width="58%">&nbsp;</td>
+                          
+                        </tr>
+
+                        <tr>
+                            <td colspan="4"><h1><font color="green">Hello @User.Identity.Name your balance is</font></h1></td>
+                    
+                            
+                        </tr>
+                       
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+
+                            <td>
+                                <input readonly=readonly asp-for="Balance" /> Birr
+
+                            </td>
+                        </tr>
+
+                     
+
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" bgcolor="#333333">&nbsp;</td>
+                        </tr>
+                    </table>
+               
+            </td>
+        </tr>
+        <tr style="height:30px;">
+            <td colspan="3" style="background-color:#2175bc;">&nbsp;</td>
+        </tr>
+    </table>
+</body>
+
+
+</html>

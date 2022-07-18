@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Users> SignInManager
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VirtualBank</title>
+
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+
+    <link rel="stylesheet" href="~/css/frontstyle.css" />
+    <style type="text/css">
+
+        html, body {
+            margin-top: 40px;
+            background-image: url(/images/img.gif);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @*If the user is signed-in display Logout link*@
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+
+            <form style="margin-left:1000px" method="post" asp-controller="home" asp-action="logout">
+                <button type="submit" style="width:auto;">
+                    <h1 style="text-align:center;">Logout @User.Identity.Name</h1>
+                </button>
+            </form>
+            }
+            @RenderBody()
+        </main>
+    </div>
+    <div class="footergroup">
+        <div class="footer">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td width="21%" class="footersectiontitle">Banking Hours</td>
+                        <td width="25%" rowspan="2" align="center" class="footersectiontitle">
+                            <div class="tooltip">
+                                <img src="~/images/eti.jpg" width="119" height="102" asp-append-version="true" />
+                                <span class="tooltiptext">yegna bank Trusted Banking site! </span>
+                            </div>
+                        </td>
+                        <td width="30%" class="footersectiontitle">Head Office Address</td>
+                        <td width="24%" class="footersectiontitle">BDU poly</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="fourthsectionfoot">
+                            all days<br>
+                            24 hours
+                        </td>
+                        <td valign="top" class="fourthsectionfoot">
+                            Yegna  Bank <br>
+                            P.O Box  10-292<br> poly campus <br>
+                            Bahirdar,  Ethiopia
+                        </td>
+                        <td valign="top" class="fourthsectionfoot">
+                            <a href="https://web.facebook.com" target="_blank"><img src="~/images/social/Facebook.png" width="30" height="30"></a> <a href="https://plus.google.com" target="_blank"><img src="~/images/social/download.png" width="30" height="30"></a> <a href="https://www.instagram.com" target="_blank"><img src="~/images/social/insticon.jpg" width="30" height="30"></a> <a href="https://twitter.com" target="_blank"><img src="~/images/social/Twitter.png" width="30" height="30" asp-append-version="true"></a> <a href="https://www.youtube.com/channel/UC0LHSqfI-2G8FSibrBhfNsw" target="_blank"><img src="~/images/social/youtube.gif" width="30" height="30"></a><br><br>
+
+                            <div class="footlink">
+                                <a href="#">About Us</a> &nbsp; <a href="#">News</a> &nbsp; <a href="#">Locations</a> &nbsp;
+                                <a href="#">Privacy</a>
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="developer">.</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

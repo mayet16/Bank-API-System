@@ -1,0 +1,189 @@
+﻿    @model RegisterViewModel
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        ViewBag.Title = "user Registration";
+    } 
+   
+    <body>
+
+
+        <table width="900" border="0" align="center" cellpadding="0" cellspacing="0" style="font-weight:normal; background-color:#FFFFFF">
+            <tr>
+                <th colspan="3" scope="col" style="height:90px; background-color:#2175bc;">
+
+                </th>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td width="160">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </td>
+                <td colspan="2">
+                    <table width="98%" border="0" align="center" cellpadding="1" cellspacing="0">
+                        <tr>
+                            <th colspan="2" scope="col">
+                                <div class="box1">
+                                   <h2 style="position:center"><font color="#FF0000"; size="14">Yegna Bank</font></h2>
+                                </div>
+                                <br />
+                                <br />
+                            </th>
+                        </tr>
+                        <tr>
+
+                            <th colspan="2" scope="col">
+                                <form enctype="multipart/form-data" asp-controller="Account" asp-action="Register" method="post">
+                                    <table width="80%" border="0" align="center" cellpadding="2" cellspacing="2" style="border:#000000 solid 2px;padding:5px;">
+                                        <tr>
+                                            <th colspan="3" bgcolor="#000000" scope="col" style="height:20px;"><font color="#FFFFFF">Customer Registration For new Account</font></th>
+                                        </tr>
+                                        <tr>
+                                            <td width="28%" rowspan="12"><div align="center"><img src="~/images/kdmconfig.png" width="48" height="48" /></div></td>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                &nbsp;
+                                                <span asp-validation-summary="All" style="color:red"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="24%">
+                                                <label asp-for="Username"> </label>
+
+                                            </td>
+                                            <td width="48%">
+                                                <div align="left">
+                                                    <input asp-for="Username" />
+                                                    <span asp-validation-for="Username" style="color:red"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="24%">
+                                                <label asp-for="Fname"> </label>
+
+                                            </td>
+                                            <td width="48%">
+                                                <div align="left">
+                                                    <input asp-for="Fname" />
+                                                    <span asp-validation-for="Fname" style="color:red"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><label asp-for="Lname"></label></td>
+                                            <td>
+                                                <div align="left">
+                                                    <input asp-for="Lname" />
+                                                </div>
+                                                <span asp-validation-for="Lname" style="color:red"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><label asp-for="Password"></label></td>
+                                            <td>
+                                                <div align="left">
+                                                    <input asp-for="Password" />
+                                                </div>
+                                                <span asp-validation-for="Password" style="color:red"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><label asp-for="ConfirmPassword"></label></td>
+                                            <td>
+                                                <div align="left">
+                                                    <input asp-for="ConfirmPassword" />
+                                                </div>
+                                                <span asp-validation-for="ConfirmPassword" style="color:red"></span>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>
+                                                <label asp-for="Address"> </label>
+                                                <span asp-validation-for="Address" style="color:red"></span>
+                                            </td>
+                                            <td>
+                                                <div align="left">
+                                                    <textarea asp-for="Address"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label asp-for="Email"> </label>
+                                                <span asp-validation-for="Email" style="color:red"></span>
+                                            </td>
+
+                                            <td>
+                                                <div align="left">
+                                                    <input asp-for="Email" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div><label asp-for="PhoneNumber"> </label></div>
+                                                <span asp-validation-for="PhoneNumber" style="color:red"></span>
+                                            </td>
+
+                                            <td>
+                                                <div align="left">
+                                                    <input asp-for="PhoneNumber" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+
+                                                <div align="right">
+                                                    <input type="reset" name="Submit2" value="Reset" />
+                                                </div>
+
+                                            </td>
+                                            <td colspan="2">
+
+                                                <div align="left">
+                                                    <input type="submit" value="Create Account" />
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    
+                                    </table>
+                                </form>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td width="50%">&nbsp;</td>
+                            <td width="50%">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="height:30px;">
+                <td colspan="3" style="background-color:#2175bc;">&nbsp;</td>
+            </tr>
+        </table>
+    </body>
+
+
